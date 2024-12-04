@@ -1,0 +1,12 @@
+HTML & CSS:
+------------
+Add prices on each card
+Make all cards clickable; Make an 'About' page for each car (see F40 for example)
+Add a Dropdown
+Add content to footer
+
+Possibly using Javascript:
+------------------------------
+When Reloading page, swap the cards placement
+A dropdown for sorting the cards by price
+Add sound effect when hovering and clicking on links and cards
