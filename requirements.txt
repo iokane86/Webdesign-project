@@ -1,12 +1,14 @@
 HTML & CSS:
 ------------
+Make Home Page; include a 'featured' section containing three cards
 Add prices on each card
 Make all cards clickable; Make an 'About' page for each car (see F40 for example)
-Add a Dropdown
+Add a Dropdown for EACH main page
 Add content to footer
+Add a wide picture on top for EACH main page and the Title of website on it
 
 Possibly using Javascript:
 ------------------------------
-When Reloading page, swap the cards placement
+When Reloading Home page, swap the cards placement / change the cards
 A dropdown for sorting the cards by price
 Add sound effect when hovering and clicking on links and cards
