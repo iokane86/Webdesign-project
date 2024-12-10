@@ -38,14 +38,67 @@
 
 </head>
 <body>
-    <img src="https://cdn.ferrari.com/cms/network/media/img/resize/5de7923a91756c07f10b1720-ferrari-f40-1987-intro-share?width=1080" class="top-img" alt="40">
+
+  <!--Slideshow container-->
+  <div class="slideshow-container">
+    <div class="mySlides">
+      <img class="mySlides-img" src="m3_slide.jpg" style="width:80%; display: block;margin-left: auto; margin-right:auto;">
+      <div class="text">BMW M3</div>
+    </div>
+    <div class="mySlides">
+      <img class="mySlides-img" src="12-cilindri_slide.jpg" style="width:80%; display: block;margin-left: auto; margin-right:auto;">
+      <div class="text">Dodici Cilindri</div>
+    </div>
+    <div class="mySlides">
+      <img class="mySlides-img" src="g-wagon_slide.jpg" style="width:80%; display: block;margin-left: auto; margin-right:auto;">
+      <div class="text">G Wagon</div>
+    </div>
+    
+    <a class="prev" onclick="plusSlides(-1)">❮</a>
+    <a class="next" onclick="plusSlides(1)">❯</a>
+    
+    </div>
+    <br>
+    
+    <div style="text-align:center">
+      <span class="dot" onclick="currentSlide(1)"></span> 
+      <span class="dot" onclick="currentSlide(2)"></span> 
+      <span class="dot" onclick="currentSlide(3)"></span> 
+    </div>
+    
+    <!--Slideshow Javascript-->
+    <script>
+      let slideIndex = 1;
+showSlides(slideIndex);
+
+function plusSlides(n) {
+  showSlides(slideIndex += n);
+}
+
+function showSlides(n) {
+  let i;
+  let slides = document.getElementsByClassName("mySlides");
+  let dots = document.getElementsByClassName("dot");
+  if (n > slides.length) {slideIndex = 1}    
+  if (n < 1) {slideIndex = slides.length}
+  for (i = 0; i < slides.length; i++) {
+    slides[i].style.display = "none";  
+  }
+  for (i = 0; i < dots.length; i++) {
+    dots[i].className = dots[i].className.replace(" active", "");
+  }
+  slides[slideIndex-1].style.display = "block";  
+  dots[slideIndex-1].className += " active";
+}
+    </script>
+
+<!---------------------------------------------------------------------------------------------------------------->
+
     <div class="big-cont">
-    <ul>
-        <li><a href="Home.html">Home</a></li>
-        <li><a href="2-Door.html">2-Door</a></li>
-        <li><a href="4-Door.html">4-Door</a></li>
-        <li><a href="2-Wheeler.html">2-Wheeler</a></li>
-        <li><a href="#about">About</a></li>
+    <ul class="navbar">
+        <li><a href="file:///C:/Users/surya/Downloads/Motorworks/2-Door.html">2-Door</a></li>
+        <li><a href="file:///C:/Users/surya/Downloads/Motorworks/4-Door.html">4-Door</a></li>
+        <li><a href="file:///C:/Users/surya/Downloads/Motorworks/2-Wheeler.html">2-Wheeler</a></li>
       </ul>
 
     <!--ROW 1-->
@@ -55,7 +108,7 @@
           <div class="card">
             <img src="https://www.joeduffy.ie/uploads/images/vehicle-listing/1691578514G310RBlue.jpg" class="card-img-top" alt="f40">
             <div class="card-body">
-            <h5>Motorrad <p style="background-color: red;float: right; font-size: small;">$100,000,000</p></h5>
+            <h5>Motorrad <p style="float: right; font-size: small;">$100,000,000</p></h5>
           </div>
         </div>
       </div>
@@ -63,7 +116,7 @@
         <div class="card">
           <img src="https://kawasaki.ie/wp-content/uploads/2023/04/23MY_Ninja_400_feat-01-460x295.png" class="card-img-top" alt="f40">
           <div class="card-body">
-          <h5>Ninja 400</h5>
+          <h5>Ninja 400 <p style="float: right; font-size: small;">€1,500,000</p></h5>
         </div>
       </div>
     </div>
@@ -71,7 +124,7 @@
         <div class="card">
           <img src="https://www.royalenfield.com/content/dam/royal-enfield/united-kingdom/motorcycles/motorcycle-page-thumbnails/EU-Website-Classic350.jpg" class="card-img-top" alt="f40">
           <div class="card-body">
-          <h5>Royal Enfield</h5>
+          <h5>Royal Enfield <p style="float: right; font-size: small;">€1,500,000</p></h5>
         </div>
       </div>
     </div>
@@ -84,7 +137,7 @@
             <div class="card">
               <img src="https://media.umbraco.io/suzuki-gb/pzrphbgm/hayabusa_jwn-1.png?width=828&quality=75&format=webp" class="card-img-top" alt="f40">
               <div class="card-body">
-              <h5>Suzuki</h5>
+              <h5>Suzuki <p style="float: right; font-size: small;">€1,500,000</p></h5>
             </div>
           </div>
         </div>
@@ -92,7 +145,7 @@
           <div class="card">
             <img src="https://images.ctfassets.net/x7j9qwvpvr5s/4HlUH643FkllwFieWYK71F/febb529958138472bb26e3bb336e5ff4/MY24-Monster-Rd-Model-Blocks-3-4-630x390.png" class="card-img-top" alt="f40">
             <div class="card-body">
-            <h5>Ducati</h5>
+            <h5>Ducati <p style="float: right; font-size: small;">€1,500,000</p></h5>
           </div>
         </div>
       </div>
@@ -100,7 +153,7 @@
           <div class="card">
             <img src="https://preview.redd.it/k31qfi9555w41.jpg?auto=webp&s=e6081a4a31b33727b07b19e25e91f705656c1e88" class="card-img-top" alt="f40">
             <div class="card-body">
-            <h5>Tomohawk</h5>
+            <h5>Tomohawk <p style="float: right; font-size: small;">€1,500,000</p></h5>
           </div>
         </div>
       </div>
@@ -111,26 +164,47 @@
       </div>
     </div>
     
-      <footer class="bg-dark text-white text-center p-3">
-        <div class="container my-4">
-          <div class="row">
-            <div class="col-md-2">
-                <img src="ferrari_logo.png" style="width:100px;" alt="f40">
-            </div>
-            <div class="col-md-2">
-              <img src="lambo_logo.png" style="width:100px;" alt="f40">
+    <footer class="bg-dark text-white text-center p-3">
+      <div class="container my-4">
+        <div class="row">
+          <div class="col-md-2">
+              <img src="ferrari_logo.png" style="width:100px;" alt="f40">
           </div>
           <div class="col-md-2">
-            <img src="mas_logo.png" style="width:100px;" alt="f40">
+            <img src="lambo_logo.png" style="width:100px;" alt="f40">
         </div>
         <div class="col-md-2">
-          <img src="porsche_logo.png" style="width:100px;" alt="f40">
-      </div><div class="col-md-2">
-        <img src="bmw_logo.png" style="width:100px;" alt="f40">
+          <img src="mas_logo.png" style="width:100px;" alt="f40">
+      </div>
+      <div class="col-md-2">
+        <img src="porsche_logo.png" style="width:100px;" alt="f40">
     </div><div class="col-md-2">
-      <img src="benz_logo.png" style="width:100px;" alt="f40">
-  </div>
+      <img src="bmw_logo.png" style="width:100px;" alt="f40">
+  </div><div class="col-md-2">
+    <img src="benz_logo.png" style="width:100px;" alt="f40">
+</div>
+        </div>
+      </div>
+      <div class="container my-4">
+        <div class="row" style="margin-top: 50px;">
+          <div class="col-md-3">
+              <h5 style="float:left">SIFK Motorworks</h5>
           </div>
+          <div class="col-md-3">
+            <h6 style="text-align: left;">Contact Us</h6>
+            <ul class="footer-emails">
+              <li><a href="file:///C:/Users/surya/Downloads/Motorworks/Home.html">surya.sathyarajan2@mail.dcu.ie</a></li>
+              <li><a href="file:///C:/Users/surya/Downloads/Motorworks/2-Door.html">Fionn</a></li>
+              <li><a href="file:///C:/Users/surya/Downloads/Motorworks/4-Door.html">Iarla</a></li>
+              <li><a href="file:///C:/Users/surya/Downloads/Motorworks/2-Wheeler.html">Karol</a></li>
+            </ul>
+        </div>
+        <div class="col-md-2">
+          <h6 style="text-align: left;">General</h6>
+      </div>
+      <div class="col-md-3">
+        <h6 style="text-align: left;">Socials</h6>
+    </div>
         </div>
       </div>
       </footer>
