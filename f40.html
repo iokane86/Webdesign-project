@@ -49,11 +49,19 @@
       <div class="row">
         <div class="col-md-4">
           <div class="card">
-            <img src="https://cdn.ferrari.com/cms/network/media/img/resize/5de7923a91756c07f10b1720-ferrari-f40-1987-intro-share?width=1080" class="card-img-top" alt="f40">
+            <img id="myImg" src="https://cdn.ferrari.com/cms/network/media/img/resize/5de7923a91756c07f10b1720-ferrari-f40-1987-intro-share?width=1080" class="card-img-top" alt="f40">
             <div class="card-body">
-            <h5>FERRARI F40 <p style="background-color:red; float:right; font-size:small;">$100,000,000</p></h5>
+            <h5>FERRARI F40 <p id="display-word" style="float:right; font-size:small;">€1,500,000</p></h5>
           </div>
           </div>
+
+          <div style="margin-top: 5px;">
+            <button id="change-item">currency</button>
+            <button id="myButton3" style="margin-left: 120px; height: 20px; width: 20px; background-color: #0066ff;"></button>
+            <button id="myButton" style="height: 20px; width: 20px; background-color: #eeff00;"></button>
+            <button id="myButton2" style="height: 20px; width: 20px; background-color: #ff0000;"></button>
+          </div>
+
         </div>
         <div class="col-md-8">
             <p>Experience the thrill of owning a true icon of automotive history with the **Ferrari F40**—a masterpiece designed to ignite your passion for speed and luxury. As the last Ferrari personally approved by Enzo Ferrari himself, the F40 is more than just a car; it’s a legacy of performance, craftsmanship, and exclusivity. Beneath its striking, aerodynamic body lies a twin-turbocharged V8 engine that delivers an exhilarating 471 horsepower, launching you from 0 to 60 mph in just 3.8 seconds. With its lightweight design, raw power, and unmistakable presence, the F40 isn’t just a drive—it’s an experience that commands attention at every turn. This is your chance to own a timeless piece of Ferrari heritage, built for those who crave the ultimate driving adventure.</p>
@@ -61,19 +69,19 @@
         </div>
         <div class="row">
             <h3>Specs</h3>
-            <div class="col-md-4" style="border-left: 2px solid black; background-color: red;">
+            <div class="col-md-4" style="border-left: 2px solid black;">
                 <p>Engine: 2.9L Twin-Turbocharged V8
                     <br>Horsepower: 471 hp @ 7,000 rpm
                     <br>Torque: 426 lb-ft @ 4,000 rpm</p>
             </div>
-            <div class="col-md-4">
+            <div class="col-md-4" style="border-left: 2px solid black;">
                 <p>
                     Top Speed: 201 mph (324 km/h)
                    <br> 0-60 mph: 3.8 seconds
                    <br>Transmission: 5-speed manual
                    <br> Drivetrain: Rear-Wheel Drive (RWD)</p>
             </div>
-            <div class="col-md-4">
+            <div class="col-md-4" style="border-left: 2px solid black;">
                 <p>
                     Weight: 2,425 lbs (1,100 kg)
                     <br> Chassis: Carbon fiber, Kevlar, and aluminum construction
@@ -85,9 +93,87 @@
       </div>
     
       <footer class="bg-dark text-white text-center p-3">
-        <p>&copy; The footer</p>
-      </footer>
+        <div class="container my-4">
+          <div class="row">
+            <div class="col-md-2">
+                <img src="ferrari_logo.png" style="width:100px;" alt="f40">
+            </div>
+            <div class="col-md-2">
+              <img src="lambo_logo.png" style="width:100px;" alt="f40">
+          </div>
+          <div class="col-md-2">
+            <img src="mas_logo.png" style="width:100px;" alt="f40">
+        </div>
+        <div class="col-md-2">
+          <img src="porsche_logo.png" style="width:100px;" alt="f40">
+      </div><div class="col-md-2">
+        <img src="bmw_logo.png" style="width:100px;" alt="f40">
+    </div><div class="col-md-2">
+      <img src="benz_logo.png" style="width:100px;" alt="f40">
+  </div>
+          </div>
+        </div>
+        <div class="container my-4">
+          <div class="row" style="margin-top: 50px;">
+            <div class="col-md-3">
+                <h5 style="float:left">SIFK Motorworks</h5>
+            </div>
+            <div class="col-md-3">
+              <h6 style="text-align: left;">Contact Us</h6>
+              <ul class="footer-emails">
+                <li><a href="file:///C:/Users/surya/Downloads/Motorworks/Home.html">surya.sathyarajan2@mail.dcu.ie</a></li>
+                <li><a href="file:///C:/Users/surya/Downloads/Motorworks/2-Door.html">Fionn</a></li>
+                <li><a href="file:///C:/Users/surya/Downloads/Motorworks/4-Door.html">Iarla</a></li>
+                <li><a href="file:///C:/Users/surya/Downloads/Motorworks/2-Wheeler.html">Karol</a></li>
+              </ul>
+          </div>
+          <div class="col-md-2">
+            <h6 style="text-align: left;">General</h6>
+        </div>
+        <div class="col-md-3">
+          <h6 style="text-align: left;">Socials</h6>
+      </div>
+          </div>
+        </div>
+        </footer>
 
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+        <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+        <script>
+          let currentIndex = 0;
+  
+          currency = 1500000
+
+          let euro = currency
+          let pound = currency * 0.83
+          let dollar = currency * 1.05
+  
+          const words = ["£", "$", "€"];
+          const prices = [pound.toLocaleString(), dollar.toLocaleString(), euro.toLocaleString()];
+  
+      $("#change-item").click(function() {
+          if (words.length > 0) {
+              $("#display-word").text((words[currentIndex]) + prices[currentIndex]);
+              currentIndex = (currentIndex + 1) % words.length;
+  
+          }
+      });
+
+      const myImg = document.getElementById("myImg");
+      const myButton = document.getElementById("myButton");
+      const myButton2 = document.getElementById("myButton2");
+      const myButton3 = document.getElementById("myButton3");
+
+      myButton.addEventListener("click", function() {
+        myImg.src = "f40-yellow.jpg";
+      });
+      myButton2.addEventListener("click", function() {
+        myImg.src = "https://cdn.ferrari.com/cms/network/media/img/resize/5de7923a91756c07f10b1720-ferrari-f40-1987-intro-share?width=1080";
+      });
+      myButton3.addEventListener("click", function() {
+        myImg.src = "f40-blue.jpg";
+      });
+
+      
+  </script>
 </body>
 </html>
