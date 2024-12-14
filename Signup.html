@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SIFK Motorsports</title>
+
+    <!--bootstrap link-->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" 
+    rel="stylesheet">
+    <!--CSS sheet link-->
+    <link rel="stylesheet" href="styles.css">
+    
+    <style>
+
+
+/* footer styling */
+.footer-logo {
+  width: 100px;
+}
+
+        </style>
+
+</head>
+<body>
+
+      <!--Top Bar sliding text-->
+      <div class="top-bar" style="margin-bottom: 10px;">
+        <div class="top-bar-logo">
+            SIFK Motorsports
+        </div>
+        <marquee direction="left" style="flex: 1; white-space: nowrap;">
+            Welcome to SIFK Motorsports! &emsp;&emsp; Made by Surya, Iarla, Fionn, Karol
+        </marquee>
+    </div>
+
+    <!--------------------------------------------------------------------------------------->
+
+    <div class="big-cont">
+    <ul class="navbar">
+        <li style="text-decoration:underline;"><a href="file:///C:/Users/surya/Downloads/Motorworks/Signup.html">Sign Up</a></li>
+        <li><a href="file:///C:/Users/surya/Downloads/Motorworks/Login.html">Log In</a></li>
+        <li><a href="file:///C:/Users/surya/Downloads/Motorworks/Purchase.html">Purchase</a></li>
+        <li><a href="file:///C:/Users/surya/Downloads/Motorworks/2-Door.html">EXIT</a></li>
+      </ul>
+
+      <!--Signup Form-->
+      <div>
+        <form class="modal-content">
+          <div class="sign-container">
+            <h1>Sign Up</h1>
+            <p>Please fill in this form to create an account.</p>
+            <hr>
+            <label for="email"><b>Email</b></label>
+            <input type="text" placeholder="Enter Email" name="email" required>
+      
+            <label for="email"><b>Username</b></label>
+            <input type="text" placeholder="Enter Username" name="user-form" required>
+      
+            <label for="psw"><b>Password</b></label>
+            <input type="password" placeholder="Enter Password" name="psw" required>
+      
+            <label for="psw-repeat"><b>Repeat Password</b></label>
+            <input type="password" placeholder="Repeat Password" name="psw-repeat" required>
+            
+            <label>
+              <input type="checkbox" checked="checked" name="remember" style="margin-bottom:15px"> Remember me
+            </label>
+      
+            <p>By creating an account you agree to our <a href="#" style="color:dodgerblue">Terms & Privacy</a>.</p>
+      
+            <div class="clearfix">
+              <button class="cancelbtn">Cancel</button>
+              <button type="submit" class="signupbtn">Sign Up</button>
+            </div>
+          </div>
+        </form>
+      </div>
+
+      </div>
+      </div>
+      </div>
+    </div>
+    
+      <footer class="bg-dark text-white text-center p-3">
+      <div class="container my-4">
+        <div class="row">
+          <div class="col-md-2">
+              <img src="ferrari_logo.png" style="width:100px;" alt="f40">
+          </div>
+          <div class="col-md-2">
+            <img src="lambo_logo.png" style="width:100px;" alt="f40">
+        </div>
+        <div class="col-md-2">
+          <img src="mas_logo.png" style="width:100px;" alt="f40">
+      </div>
+      <div class="col-md-2">
+        <img src="porsche_logo.png" style="width:100px;" alt="f40">
+    </div><div class="col-md-2">
+      <img src="bmw_logo.png" style="width:100px;" alt="f40">
+  </div><div class="col-md-2">
+    <img src="benz_logo.png" style="width:100px;" alt="f40">
+</div>
+        </div>
+      </div>
+      <div class="container my-4">
+        <div class="row" style="margin-top: 50px;">
+          <div class="col-md-3">
+              <h5 style="float:left">SIFK Motorworks</h5>
+          </div>
+          <div class="col-md-3">
+            <h6 style="text-align: left;">Contact Us</h6>
+            <ul class="footer-emails">
+              <li><a href="file:///C:/Users/surya/Downloads/Motorworks/Home.html">surya.sathyarajan2@mail.dcu.ie</a></li>
+              <li><a href="file:///C:/Users/surya/Downloads/Motorworks/2-Door.html">Fionn</a></li>
+              <li><a href="file:///C:/Users/surya/Downloads/Motorworks/4-Door.html">Iarla</a></li>
+              <li><a href="file:///C:/Users/surya/Downloads/Motorworks/2-Wheeler.html">Karol</a></li>
+            </ul>
+        </div>
+        <div class="col-md-2">
+          <h6 style="text-align: left;">General</h6>
+      </div>
+      <div class="col-md-3">
+        <h6 style="text-align: left;">Socials</h6>
+    </div>
+        </div>
+      </div>
+      </footer>
+
+
+          <!--Slideshow Javascript-->
+  <script>
+    
+      let slideIndex = 1;
+showSlides(slideIndex);
+
+function plusSlides(n) {
+  showSlides(slideIndex += n);
+}
+
+function showSlides(n) {
+  let i;
+  let slides = document.getElementsByClassName("mySlides");
+  let dots = document.getElementsByClassName("dot");
+  if (n > slides.length) {slideIndex = 1}    
+  if (n < 1) {slideIndex = slides.length}
+  for (i = 0; i < slides.length; i++) {
+    slides[i].style.display = "none";  
+  }
+  for (i = 0; i < dots.length; i++) {
+    dots[i].className = dots[i].className.replace(" active", "");
+  }
+  slides[slideIndex-1].style.display = "block";  
+  dots[slideIndex-1].className += " active";
+};
+
+  /*-----------------------------------------------------*/
+
+    </script>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+
+
+</body>
+</html>

@@ -48,18 +48,18 @@
     <div class="container my-4">
       <div class="row">
         <div class="col-md-4">
-          <div class="card">
-            <img id="myImg" src="https://cdn.ferrari.com/cms/network/media/img/resize/5de7923a91756c07f10b1720-ferrari-f40-1987-intro-share?width=1080" class="card-img-top" alt="f40">
-            <div class="card-body">
-            <h5>FERRARI F40 <p id="display-word" style="float:right; font-size:small;">€1,500,000</p></h5>
-          </div>
-          </div>
+            <div class="card">
+                <img id="myImg" src="https://static.wikia.nocookie.net/topgear/images/0/03/2002_lamborghini_murcielago_2.jpg/revision/latest?cb=20111203192849" class="card-img-top" alt="f40">
+                <div class="card-body">
+                <h5>LAMBO MURCIA <p id="display-word" style="float: right; font-size: small;">€400,000</p></h5>
+              </div>
+            </div>
 
           <div class="options">
             <button id="change-item">currency</button>
-            <button id="myButton3" style="background-color: #0066ff; margin-left: 120px;"></button>
-            <button id="myButton" style="background-color: #eeff00;"></button>
-            <button id="myButton2" style="background-color: #ff0000;"></button>
+            <button id="myButton3" style="background-color: orange; margin-left: 120px;"></button>
+            <button id="myButton" style="background-color: white;"></button>
+            <button id="myButton2" style="background-color: yellow;"></button>
             <a href="file:///C:/Users/surya/Downloads/Motorworks/Purchase.html">
             <button id="purchase">Purchase</button>
           </a>
@@ -67,7 +67,7 @@
           </div>
 
         </div>
-        <div class="col-md-8" style="font-weight:lighter;">
+        <div class="col-md-8" style="font-weight: lighter;">
             <p>Experience the thrill of owning a true icon of automotive history with the **Ferrari F40**—a masterpiece designed to ignite your passion for speed and luxury. As the last Ferrari personally approved by Enzo Ferrari himself, the F40 is more than just a car; it’s a legacy of performance, craftsmanship, and exclusivity. Beneath its striking, aerodynamic body lies a twin-turbocharged V8 engine that delivers an exhilarating 471 horsepower, launching you from 0 to 60 mph in just 3.8 seconds. With its lightweight design, raw power, and unmistakable presence, the F40 isn’t just a drive—it’s an experience that commands attention at every turn. This is your chance to own a timeless piece of Ferrari heritage, built for those who crave the ultimate driving adventure.</p>
         </div>
         </div>
@@ -144,7 +144,7 @@
         <script>
           let currentIndex = 0;
   
-          currency = 1500000
+          currency = 400000
 
           let euro = currency
           let pound = currency * 0.83
@@ -167,13 +167,13 @@
       const myButton3 = document.getElementById("myButton3");
 
       myButton.addEventListener("click", function() {
-        myImg.src = "f40-yellow.jpg";
+        myImg.src = "murci-white.jpg";
       });
       myButton2.addEventListener("click", function() {
-        myImg.src = "https://cdn.ferrari.com/cms/network/media/img/resize/5de7923a91756c07f10b1720-ferrari-f40-1987-intro-share?width=1080";
+        myImg.src = "https://static.wikia.nocookie.net/topgear/images/0/03/2002_lamborghini_murcielago_2.jpg/revision/latest?cb=20111203192849";
       });
       myButton3.addEventListener("click", function() {
-        myImg.src = "f40-blue.jpg";
+        myImg.src = "murci-orange.jpg";
       });
 
       
