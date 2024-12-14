@@ -190,6 +190,9 @@ img {vertical-align: middle;}
   transition: 0.6s ease;
   text-shadow: 2px 2px 4px #000000;
 }
+.mySlides-img {
+  border-bottom: 5px ridge whitesmoke;
+}
 .mySlides:hover .mySlides-img {
   filter: brightness(75%);
 }
@@ -198,6 +201,13 @@ img {vertical-align: middle;}
     opacity: 1; 
 }
 /* The dots/bullets/indicators */
+.dot-set {
+  position:absolute;
+  bottom: 10px; /* Adjust the value to position the dots vertically */
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 10;
+}
 .dot {
   cursor: pointer;
   height: 5px;
