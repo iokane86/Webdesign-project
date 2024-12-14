@@ -48,35 +48,72 @@
       <!--Purchase Form-->
       <div>
         <form class="modal-content">
-          <div class="sign-container">
-            <h1>Sign Up</h1>
-            <p>Please fill in this form to create an account.</p>
-            <hr>
-            <label for="email"><b>Email</b></label>
-            <input type="text" placeholder="Enter Email" name="email" required>
-      
-            <label for="email"><b>Username</b></label>
-            <input type="text" placeholder="Enter Username" name="user-form" required>
-      
-            <label for="psw"><b>Password</b></label>
-            <input type="password" placeholder="Enter Password" name="psw" required>
-      
-            <label for="psw-repeat"><b>Repeat Password</b></label>
-            <input type="password" placeholder="Repeat Password" name="psw-repeat" required>
-            
-            <label>
-              <input type="checkbox" checked="checked" name="remember" style="margin-bottom:15px"> Remember me
-            </label>
-      
-            <p>By creating an account you agree to our <a href="#" style="color:dodgerblue">Terms & Privacy</a>.</p>
-      
-            <div class="clearfix">
-              <button class="cancelbtn">Cancel</button>
-              <button type="submit" class="signupbtn">Sign Up</button>
+            <div class="sign-container">
+                <h1>Car Checkout</h1>
+                <p>Please fill in this form to proceed with your car purchase.</p>
+                <hr>
+    
+                <!-- Personal Information -->
+                <label for="fullName"><b>Full Name</b></label>
+                <input type="text" placeholder="Enter Full Name" name="fullName" required>
+    
+                <label for="email"><b>Email</b></label>
+                <input type="text" placeholder="Enter Email" name="email" required>
+    
+                <label for="phone"><b>Phone Number</b></label>
+                <input type="text" placeholder="Enter Phone Number" name="phone" required>
+    
+                <!-- Vehicle Information -->
+                <label for="vehicleModel"><b>Vehicle Make & Model</b></label>
+                <input type="text" placeholder="Enter Make & Model" name="vehicleModel" required>
+    
+                <label for="year"><b>Year</b></label>
+                <input type="number" placeholder="Enter Year" name="year" required>
+    
+                <label for="color"><b>Color</b></label>
+                <input type="text" placeholder="Enter Color" name="color">
+    
+                <!-- Payment Details -->
+                <label for="paymentMethod"><b>Payment Method</b></label>
+                <select name="paymentMethod" required>
+                    <option value="cash">Cash</option>
+                    <option value="loan">Loan</option>
+                    <option value="trade-in">Trade-In</option>
+                </select>
+    
+                <label for="tradeIn"><b>Trade-In Vehicle (if applicable)</b></label>
+                <input type="text" placeholder="Enter Trade-In Vehicle Details" name="tradeIn">
+    
+                <!-- Insurance Information -->
+                <label for="insuranceProvider"><b>Insurance Provider</b></label>
+                <input type="text" placeholder="Enter Insurance Provider" name="insuranceProvider" required>
+    
+                <label for="policyNumber"><b>Policy Number</b></label>
+                <input type="text" placeholder="Enter Policy Number" name="policyNumber" required>
+    
+                <!-- Delivery Options -->
+                <label for="deliveryOption"><b>Delivery Option</b></label>
+                <select name="deliveryOption" required>
+                    <option value="pickup">Pickup from Dealership</option>
+                    <option value="home">Home Delivery</option>
+                </select>
+    
+                <label for="deliveryAddress"><b>Delivery Address (if applicable)</b></label>
+                <input type="text" placeholder="Enter Delivery Address" name="deliveryAddress">
+    
+                <!-- Terms and Conditions -->
+                <label>
+                    <input type="checkbox" name="agree" required> I agree to the Terms and Conditions
+                </label>
+    
+                <div class="clearfix">
+                    <button class="cancelbtn">Cancel</button>
+                    <button type="submit" class="signupbtn">Checkout</button>
+                </div>
             </div>
-          </div>
         </form>
-      </div>
+    </div>
+    
 
 
       </div>
