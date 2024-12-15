@@ -244,27 +244,31 @@ document.querySelector('.signupbtn').addEventListener('click', function(event) {
     <div class="container my-4">
         <div class="row">
           <div class="col-md-4">
-              <
+              <div class="product" data-price="21995">
             <div class="card">
               <img src="https://media.umbraco.io/suzuki-gb/pzrphbgm/hayabusa_jwn-1.png?width=828&quality=75&format=webp" class="card-img-top" alt="f40">
               <div class="card-body">
               <h5>Suzuki <p style="float: right; font-size: small;">€21,995</p></h5>
             </div>
+            </div>
           </div>
         </div>
         <div class="col-md-4">
+            <div class="product" data-price="21800">
           <div class="card">
             <img src="https://images.ctfassets.net/x7j9qwvpvr5s/4HlUH643FkllwFieWYK71F/febb529958138472bb26e3bb336e5ff4/MY24-Monster-Rd-Model-Blocks-3-4-630x390.png" class="card-img-top" alt="f40">
             <div class="card-body">
-            <h5>Ducati <p style="float: right; font-size: small;">€21.800</p></h5>
+            <h5>Ducati <p style="float: right; font-size: small;">€21,800</p></h5>
           </div>
         </div>
       </div>
       <div class="col-md-4">
+          <div class="product" data-price="36990">
           <div class="card">
             <img src="https://preview.redd.it/k31qfi9555w41.jpg?auto=webp&s=e6081a4a31b33727b07b19e25e91f705656c1e88" class="card-img-top" alt="f40">
             <div class="card-body">
             <h5>Tomohawk <p style="float: right; font-size: small;">€36,990</p></h5>
+          </div>
           </div>
         </div>
       </div>
@@ -274,6 +278,18 @@ document.querySelector('.signupbtn').addEventListener('click', function(event) {
       </div>
       </div>
     </div>
+
+    <div class="filt">
+      <div>
+          <label for="minPriceFilter">Min Price: </label>
+          <input type="text" id="minPriceFilter" placeholder="Enter min price">
+      </div>
+      <div>
+          <label for="maxPriceFilter">Max Price: </label>
+          <input type="text" id="maxPriceFilter" placeholder="Enter max price">
+      </div>
+      <button id="confirmButton" class="btn btn-primary mt-4">Confirm</button>
+  </div>
     
        <!--Footer-->
       <footer class="bg-dark text-white text-center p-3">
@@ -332,6 +348,57 @@ document.querySelector('.signupbtn').addEventListener('click', function(event) {
         </div>
       </div>
       </footer>
+
+    <script>
+        const minPriceFilter = document.getElementById('minPriceFilter');
+    const maxPriceFilter = document.getElementById('maxPriceFilter');
+    const productList = document.getElementById('productlist');
+    const confirmButton = document.getElementById('confirmButton');
+
+    // Function to filter products based on min and max price
+    function filterProducts() {
+        let minPrice = parseInt(minPriceFilter.value);
+        let maxPrice = parseInt(maxPriceFilter.value);
+
+        if (isNaN(minPrice) || minPrice === '') {
+            minPrice = 0;  // Default min price
+        }
+        if (isNaN(maxPrice) || maxPrice === '') {
+            maxPrice = 3000000;  // Default max price
+        }
+
+        console.log('Min Price:', minPrice, 'Max Price:', maxPrice);  // Debugging output
+
+        const products = productList.querySelectorAll('.product');
+
+        // Loop through each product and apply the filter
+        products.forEach(product => {
+            const productPrice = parseInt(product.getAttribute('data-price'));
+
+            if (productPrice >= minPrice && productPrice <= maxPrice) {
+                product.style.display = 'block';  // Show product
+            } else {
+                product.style.display = 'none';   // Hide product
+            }
+        });
+    }
+
+    // Event listener for the Confirm button
+    confirmButton.addEventListener('click', function() {
+        filterProducts();
+    });
+
+    // Restrict the input to integers only (no letters, no 'e', etc.)
+    function restrictToIntegers(event) {
+        const input = event.target;
+        input.value = input.value.replace(/[^0-9]/g, '');  // Remove anything that's not a digit
+        console.log(input.value);  // Debugging output
+    }
+
+    // Attach event listeners to restrict input for both min and max price filters
+    minPriceFilter.addEventListener('input', restrictToIntegers);
+    maxPriceFilter.addEventListener('input', restrictToIntegers);
+    </script>
 
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
 </body>
