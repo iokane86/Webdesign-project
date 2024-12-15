@@ -1,370 +1,319 @@
 body {
-    background: linear-gradient(to bottom, #950606 0%, #F61313 100%);
+  background: linear-gradient(to bottom, #950606 0%, #F61313 100%);
 }
 
 /* Full-width input fields */
 input[type=text], input[type=password] {
-  width: 100%;
-  padding: 15px;
-  margin: 5px 0 22px 0;
-  display: inline-block;
-  border: none;
-  background: #f1f1f1;
+width: 100%;
+padding: 15px;
+margin: 5px 0 22px 0;
+display: inline-block;
+background: #f1f1f1;
+border: none;
 }
 
 /* Add a background color when the inputs get focus */
 input[type=text]:focus, input[type=password]:focus {
-  background-color: #ddd;
-  outline: none;
+background-color: #ddd;
+outline: none;
 }
 
 .top-bar > .top-bar-sign {
-  background-color: #04AA6D;
-  color: white;
-  border: none;
-  padding: 0px 10px;
-  cursor: pointer;
-  height: 100%;
-  display: flex;
-  align-items: center;
-  margin-left: auto;
-  border-style:none;
+display: flex;
+align-items: center;
+margin-left: auto;
+height: 100%;
+padding: 0px 10px;
+background-color: #04AA6D;
+color: white;
+border: none;
+border-style: none;
+cursor: pointer;
 }
 .top-bar > .top-bar-sign:hover {
-  opacity: 0.9;
+opacity: 0.9;
 }
+
 .avatar {
-  vertical-align: middle;
-  width: 20px;
-  height: 20px;
-  border-radius: 50%;
+width: 20px;
+height: 20px;
+border-radius: 50%;
+vertical-align: middle;
 }
 
 /* Set a style for all buttons */
 .signupbtn, .cancelbtn {
-  background-color: #04AA6D;
-  color: white;
-  padding: 14px 20px;
-  margin: 8px 0;
-  border: none;
-  cursor: pointer;
-  width: 100%;
-  opacity: 0.9;
+width: 100%;
+padding: 14px 20px;
+margin: 8px 0;
+background-color: #04AA6D;
+color: white;
+border: none;
+cursor: pointer;
+opacity: 0.9;
 }
 
 .signupbtn:hover, .cancelbtn:hover {
-  opacity:1;
+opacity: 1;
 }
 
 /* Extra styles for the cancel button */
 .cancelbtn {
-  padding: 14px 20px;
-  background-color: #f44336;
+background-color: #f44336;
+padding: 14px 20px;
 }
 
 /* Float cancel and signup buttons and add an equal width */
 .cancelbtn, .signupbtn {
-  float: left;
-  width: 50%;
+float: left;
+width: 50%;
 }
 
 /* Add padding to container elements */
 .sign-container {
-  padding: 16px;
+padding: 16px;
 }
 
 /* The Modal (background) */
 .modal {
-  display: none; /* Hidden by default */
-  position: fixed; /* Stay in place */
-  z-index: 2; /* Sit on top */
-  left: 0;
-  top: 0;
-  width: 100%; /* Full width */
-  height: 100%; /* Full height */
-  overflow: auto; /* Enable scroll if needed */
-  background-color: rgba(0,0,0,0.5);
-  padding-top: 50px;
+display: none; /* Hidden by default */
+position: fixed; /* Stay in place */
+z-index: 2; /* Sit on top */
+top: 0;
+left: 0;
+width: 100%; /* Full width */
+height: 100%; /* Full height */
+padding-top: 50px;
+overflow: auto; /* Enable scroll if needed */
+background-color: rgba(0,0,0,0.5);
 }
 
 /* Modal Content/Box */
 .modal-content {
-  background-color:#000000;
-  color:white;
-  margin: 5% auto 15% auto; /* 5% from the top, 15% from the bottom and centered */
-  border: 1px solid red;
-  width: 50%; /* Could be more or less, depending on screen size */
-  font-weight: lighter;
+width: 50%; /* Could be more or less, depending on screen size */
+margin: 5% auto 15% auto; /* 5% from the top, 15% from the bottom and centered */
+background-color: #000000;
+color: white;
+border: 1px solid red;
+font-weight: lighter;
 }
 
 /* Style the horizontal ruler */
 hr {
-  border: 1px solid red;
-  margin-bottom: 25px;
+margin-bottom: 25px;
+border: 1px solid red;
 }
 
 /* Clear floats */
 .clearfix::after {
-  content: "";
-  clear: both;
-  display: table;
+content: "";
+display: table;
+clear: both;
 }
 
 /* Change styles for cancel button and signup button on extra small screens */
 @media screen and (max-width: 300px) {
-  .cancelbtn, .signupbtn {
-     width: 100%;
-  }
+.cancelbtn, .signupbtn {
+  width: 100%;
+}
 }
 
 /*------------------------------------------------------------------------------------------------------------*/
 .top-bar {
-  width: 100%; 
-  height: 25px; 
-  display: flex; 
-  align-items: center; 
-  background-color: #00005a; 
-  color:white;
-  font-style:italic;
-  font-size: smaller;
+width: 100%;
+height: 25px;
+display: flex;
+align-items: center;
+background-color: #00005a;
+color: white;
+font-style: italic;
+font-size: smaller;
 }
 .top-bar > .top-bar-logo {
-  background-color: #cd1c18; 
-  padding: 0 10px; 
-  height: 100%; 
-  display: flex; 
-  align-items: center;
-  font-weight: bold;
+display: flex;
+align-items: center;
+height: 100%;
+padding: 0 10px;
+background-color: #cd1c18;
+font-weight: bold;
 }
 
 /*------------------------------------------------------------------------------------------------------------*/
 
 /*Slideshow Styling*/
 
-img {vertical-align: middle;}
+img {
+vertical-align: middle;
+}
 
 /* Slideshow container */
 .slideshow-container {
-  max-width: 80%;
-  position: relative;
-  margin-left: auto;
-  margin-right: auto;
-  margin-bottom: 5px;
-  z-index: 0;
+max-width: 80%;
+position: relative;
+margin: 0 auto 5px auto;
+z-index: 0;
 }
 /* Next & previous buttons */
 .prev, .next {
-  cursor:crosshair;
-  position: absolute;
-  top: 50%;
-  width: auto;
-  padding: 16px;
-  margin-top: -22px;
-  color: white;
-  font-weight: bold;
-  font-size: 18px;
-  transition: 0.6s ease;
-  border-radius: 0 3px 3px 0;
-  user-select: none;
+position: absolute;
+top: 50%;
+margin-top: -22px;
+padding: 16px;
+color: white;
+font-size: 18px;
+font-weight: bold;
+transition: 0.6s ease;
+cursor: crosshair;
+user-select: none;
+border-radius: 0 3px 3px 0;
 }
 /* Position the "next button" to the right */
 .next {
-  right: 0;
-  border-radius: 3px 0 0 3px;
+right: 0;
+border-radius: 3px 0 0 3px;
 }
 /* On hover, add a black background color with a little bit see-through */
 .prev:hover, .next:hover {
-  background-color: rgba(0,0,0,0.8);
+background-color: rgba(0,0,0,0.8);
 }
 /* Caption text */
 .text {
-  color: white;
-  font-weight:lighter;
-  font-size: 30px;
-  padding: 8px 12px;
-  position: absolute;
-  bottom: 50%;
-  width: 100%;
-  text-align: center;
-  visibility: hidden;
-  opacity: 0;
-  transition: 0.6s ease;
-  text-shadow: 2px 2px 4px #000000;
+position: absolute;
+bottom: 50%;
+width: 100%;
+padding: 8px 12px;
+color: white;
+font-size: 30px;
+font-weight: lighter;
+text-align: center;
+visibility: hidden;
+opacity: 0;
+transition: 0.6s ease;
+text-shadow: 2px 2px 4px #000000;
 }
 .mySlides-img {
-  border-bottom: 5px ridge whitesmoke;
+border-bottom: 5px ridge whitesmoke;
 }
 .mySlides:hover .mySlides-img {
-  filter: brightness(75%);
+filter: brightness(75%);
 }
 .mySlides:hover .text {
-    visibility: visible;
-    opacity: 1; 
+visibility: visible;
+opacity: 1;
 }
 /* The dots/bullets/indicators */
 .dot-set {
-  position:absolute;
-  bottom: 10px; /* Adjust the value to position the dots vertically */
-  left: 50%;
-  transform: translateX(-50%);
-  z-index: 10;
+position: absolute;
+bottom: 10px; /* Adjust the value to position the dots vertically */
+left: 50%;
+transform: translateX(-50%);
+z-index: 10;
 }
 .dot {
-  cursor: pointer;
-  height: 5px;
-  width: 5px;
-  margin: 5 5px;
-  background-color: #bbb;
-  border-radius: 50%;
-  display:inline-block;
-  transition: background-color 0.6s ease;
+display: inline-block;
+width: 5px;
+height: 5px;
+margin: 5 5px;
+background-color: #bbb;
+border-radius: 50%;
+cursor: pointer;
+transition: background-color 0.6s ease;
 }
 .active, .dot:hover {
-  background-color: #717171;
+background-color: #717171;
 }
 
 /*--------------------------------------------------------------------------------------------------------------*/
 
-    /*Navigation Bar styling*/
-    .navbar {
-    list-style-type: none;
-    margin: 0;
-    padding: 0;
-    overflow: hidden;
-    display: flex;
-    justify-content: center;
-    position: sticky;
-    z-index: 1;
-    top: 0;
-    text-transform: uppercase;
-    border-bottom: 2px solid black;
-    background-color: #950606;
-    }
-    .navbar li a {
-    display: block;
-    color: white;
-    text-align: center;
-    padding: 14px 30px;
-    text-decoration: none;
-    }
-    .navbar li a:hover {
-    background-color: white;
-    color: #000000;
-    }
+/*Navigation Bar styling*/
+.navbar {
+display: flex;
+justify-content: center;
+position: sticky;
+top: 0;
+z-index: 1;
+margin: 0;
+padding: 0;
+list-style-type: none;
+text-transform: uppercase;
+background-color: #950606;
+border-bottom: 2px solid black;
+overflow: hidden;
+}
+.navbar li a {
+display: block;
+color: white;
+text-align: center;
+padding: 14px 30px;
+text-decoration: none;
+}
+.navbar li a:hover {
+background-color: white;
+color: #000000;
+}
 
-    /*Main Page Area*/
-    .big-cont {
-        display: block;
-        margin-top: 0px;
-        margin-bottom: 10px;
-        margin-left: auto;
-        margin-right: auto;
-        width: 75%;
-        background-color: #950606;
-        border:2px solid #000000;
-        color:white;
-        z-index: 0;
-    }
+/*Main Page Area*/
+.big-cont {
+display: block;
+width: 75%;
+margin: 0 auto 10px auto;
+background-color: #950606;
+color: white;
+border: 2px solid #000000;
+z-index: 0;
+}
 
-    /*Footer styling*/
-    .footer-emails {
-      list-style-type:none;
-      text-align: left;
-    }
-    .footer-emails li a {
-      text-decoration: none;
-      color:gray;
-    }
-    .footer-emails li a:hover {
-      color: red;
-    }
+/*Footer styling*/
+.footer-emails {
+list-style-type: none;
+text-align: left;
+}
+.footer-emails li a {
+color: gray;
+text-decoration: none;
+}
+.footer-emails li a:hover {
+color: red;
+}
 
-    /*--------------------------------------*/
+/*--------------------------------------*/
 
-    /*f40*/
+/*f40*/
 
-    .options {
-      margin-top: 5px;
-    }
-    #change-item {
-      background-color:grey;
-      color: black;
-      border: 1px solid black;
-      border-radius: 2px;
-      font-weight: lighter;
-    }
-    #purchase {
-      width: 100%; 
-      background-color: #cd1c18; 
-      color: white;
-      margin: 10px 0 2px 0;
-      border: 1px solid black;
-      border-radius: 2px;
-      font-weight: lighter;
-    }
-    #shortlist {
-      width: 100%; 
-      background-color: grey;
-      color: white;
-      margin: 2px 0 20px 0;
-      border: 1px solid black;
-      border-radius: 2px;
-      font-weight: lighter;
-    }
-    #purchase:hover, #shortlist:hover {
-      opacity: 0.9;
-    }
-    #myButton, #myButton2, #myButton3 {
-      height: 20px; 
-      width: 20px;
-      border: 1px solid black;
-      border-radius: 2px;
-    }
-.login-container {
-            background: #fff;
-            padding: 20px;
-            border-radius: 8px;
-            width: 100%;
-            max-width: 400px;
-            box-sizing: border-box;
-        }
-        .login-container h1 {
-            text-align: center;
-            margin-bottom: 20px;
-            font-size: 1.5;
-            color: #333;
-        }
-        .form-group {
-            margin-bottom: 15px;
-        }
-        .form-group label {
-            display: block;
-            margin-bottom: 5px;
-            font-weight: bold;
-            color: #555;
-        }
-        .form-group input {
-            width: 100%;
-            padding: 10px;
-            border: 1px solid #ccc;
-            border-radius: 4px;
-            font-size: 1;
-            box-sizing: border-box;
-        }
-        .form-group input:focus {
-            border-color: #007bff;
-            outline: none;
-        }
-        .login-button {
-            width: 100%;
-            padding: 10px;
-            background-color: #007bff;
-            color: #fff;
-            border: none;
-            border-radius: 4px;
-            font-size: 1rem;
-            cursor: pointer;
-        }
-        .login-button:hover {
-            background-color: #0056b3;
-        }
+.options {
+margin-top: 5px;
+}
+#change-item {
+background-color: grey;
+color: black;
+border: 1px solid black;
+border-radius: 2px;
+font-weight: lighter;
+}
+#purchase {
+width: 100%;
+margin: 10px 0 2px 0;
+background-color: #cd1c18;
+color: white;
+border: 1px solid black;
+border-radius: 2px;
+font-weight: lighter;
+}
+#shortlist {
+width: 100%;
+margin: 2px 0 20px 0;
+background-color: grey;
+color: white;
+border: 1px solid black;
+border-radius: 2px;
+font-weight: lighter;
+}
+#purchase:hover, #shortlist:hover {
+opacity: 0.9;
+}
+#myButton, #myButton2, #myButton3 {
+height: 20px;
+width: 20px;
+border: 1px solid black;
+border-radius: 2px;
+}
