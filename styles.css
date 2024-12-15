@@ -221,6 +221,27 @@ background-color: #717171;
 }
 
 /*--------------------------------------------------------------------------------------------------------------*/
+.filt {
+  display: flex;
+  justify-content: space-between; /* Align elements across the container */
+  align-items: center; /* Vertically align elements */
+  gap: 10px; /* Add spacing between filter elements */
+  max-width: 100%; /* Ensure the container doesn’t overflow */
+  margin-bottom: 20px; /* Space below filters */
+}
+
+.filt input {
+  width: 150px; /* Fixed width for input boxes */
+  padding: 5px; /* Inner padding */
+  box-sizing: border-box; /* Include padding and border in the width */
+}
+
+.filt button {
+  height: 38px; /* Match the height of input fields */
+  padding: 5px 10px; /* Add padding for better click area */
+}
+
+/*--------------------------------------------------------------------------------------------------------------*/
 
 /*Navigation Bar styling*/
 .navbar {
