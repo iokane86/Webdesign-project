@@ -3,8 +3,12 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>SIFK Motorsports</title>
+    <title>FISK: 2-Door</title>
 
+    <!--jQuery link-->
+    <link rel="stylesheet" href="https://code.jquery.com/mobile/1.1.1/jquery.mobile-1.1.1.min.css" />
+    <script src="https://code.jquery.com/jquery-1.7.1.min.js"></script>
+    <script src="https://code.jquery.com/mobile/1.1.1/jquery.mobile-1.1.1.min.js"></script>
     <!--bootstrap link-->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" 
     rel="stylesheet">
@@ -14,6 +18,11 @@
     <style>
 
 /* card styling */
+ 
+
+.ui-page { 
+  background: linear-gradient(to bottom, #800000 0%, #ff0000 100%);
+}
 .card {
     background-color: #000000;
     border-color: white;
@@ -37,26 +46,40 @@
 .footer-logo {
   width: 100px;
 }
-
+.footer-emails li a{
+  color: gray !important;
+  text-decoration: none !important;
+}
+a.ui-link{
+  color: white !important;
+  text-decoration: none !important;
+  font-weight: lighter !important;
+}
+a.ui-link:hover{
+  color: black !important;
+}
         </style>
 
 </head>
 <body>
 
+      
+    <div data-role="page" id="2door" data-transition="none">
+      <div role="main">
       <!--Top Bar sliding text-->
       <div class="top-bar">
         <div class="top-bar-logo">
-            FISK Motorsports
+            SIFK Motorsports
         </div>
         <button class="top-bar-sign" 
+        data-role="none"
         onclick="document.getElementById('id01').style.display='block'" 
         id="sign-up-button"
         style="width:auto;">
         <img src="https://www.w3schools.com/howto/img_avatar.png" alt="Avatar" class="avatar">
         &emsp;Sign Up
         </button>
-        <marquee direction="left" style="flex: 1; white-space: nowrap; text-shadow:
-        0 0 10px #fff;">
+        <marquee data-role="none" direction="left" style="flex: 1; white-space: nowrap;">
             Welcome to SIFK Motorsports! &emsp;|&emsp; 
             Find Your Perfect Ride Faster &emsp;|&emsp;
             Made by Surya, Iarla, Fionn, Karol &emsp;|&emsp;
@@ -77,13 +100,11 @@
           “I’d like to consider Ferrari as a scaled down version of God.” - Jeremy Clarkson &emsp;|&emsp;
           “I’m sorry, but having an Aston Martin DB9 on the drive and not driving it is a bit like having Keira Knightley in your bed and sleeping on the couch. If you’ve got even half a scrotum it’s not going to happen.” - Jeremy Clarkson &emsp;|&emsp;
           "Aerodynamics are for people who can't build engines" - Enzo Ferrari
-
-
         </marquee>
     </div>
 
     <!--Signup Modal-->
-    <div id="id01" class="modal">
+    <div id="id01" class="modal" data-role="none">
       <form class="modal-content">
         <div class="sign-container">
           <h1>Sign Up</h1>
@@ -136,16 +157,13 @@
       <img class="mySlides-img" src="Fisk-poster.jpg" style="width:80%; display: block;margin-left: auto; margin-right:auto;">
       <div class="text" style="bottom:40%"> Discover. Drive. Dare. Delight.
       </div>
-    </div>
     <div class="mySlides">
       <img class="mySlides-img" src="m3_slide.jpg" style="width:80%; display: block;margin-left: auto; margin-right:auto;">
-      <div class="text" style="bottom:40%">BMW M3 <br> <img src="https://cdn.freebiesupply.com/logos/large/2x/bmw-m-series-1-logo-png-transparent.png" style="width: 5%;">
-      </div>
+      <div class="text">BMW M3</div>
     </div>
     <div class="mySlides">
       <img class="mySlides-img" src="12-cilindri_slide.jpg" style="width:80%; display: block;margin-left: auto; margin-right:auto;">
-      <div class="text" style="bottom: 40%;">Dodici Cilindri <br> <img src="https://www.logo.wine/a/logo/Ferrari/Ferrari-Logo.wine.svg" style="width: 8%;"> 
-      </div>
+      <div class="text">Dodici Cilindri</div>
     </div>
     <div class="mySlides">
       <img class="mySlides-img" src="g-wagon_slide.jpg" style="width:80%; display: block;margin-left: auto; margin-right:auto;">
@@ -166,8 +184,8 @@
 
     <!--------------------------------------------------------------------------------------->
 
-  <!--Main Area-->
-  <div class="big-cont">
+    <!--Main Area-->
+    <div class="big-cont">
     <ul class="navbar">
         <li><a href="2-Door.html">2-Door</a></li>
         <li><a href="4-Door.html">4-Door</a></li>
@@ -179,62 +197,69 @@
     <div class="container my-4">
       <div class="row">
         <div class="col-md-4">
-            <a style="text-decoration: none;" href="f40.html">
-              <div class="card">
-                  <img src="https://cdn.ferrari.com/cms/network/media/img/resize/5de7923a91756c07f10b1720-ferrari-f40-1987-intro-share?width=1080" class="card-img-top" alt="f40">
-                  <div class="card-body">
-                      <h5>FERRARI F40 <p style="float: right; font-size: small;">€1,500,000</p></h5>
-                  </div>
-              </div>
-            </a>
+          <a style="text-decoration: none;" href="f40.html">
+          <div class="card">
+            <img src="https://cdn.ferrari.com/cms/network/media/img/resize/5de7923a91756c07f10b1720-ferrari-f40-1987-intro-share?width=1080" class="card-img-top" alt="f40">
+            <div class="card-body">
+            <h5>FERRARI F40 <p style="float: right; font-size: small;">€1,500,000</p></h5>
+          </div>
         </div>
-        <div class="col-md-4">
-            <a style="text-decoration: none;" href="murci.html">
-              <div class="card">
-                  <img src="https://static.wikia.nocookie.net/topgear/images/0/03/2002_lamborghini_murcielago_2.jpg/revision/latest?cb=20111203192849" class="card-img-top">
-                  <div class="card-body">
-                      <h5>LAMBO MURCIA<p style="float: right; font-size: small;">€400,000</p></h5>
-                  </div>
-              </div>
-            </a>
-        </div>
-        <div class="col-md-4">
-            <a style="text-decoration: none;" href="slr.html">
-              <div class="card">
-                  <img src="https://i.ytimg.com/vi/RW2w5BhM6NM/hq720.jpg?sqp=-oaymwEhCK4FEIIDSFryq4qpAxMIARUAAAAAGAElAADIQj0AgKJD&rs=AOn4CLBUqfWfzYl3kZiE7eWwSdnN9aoYKg" class="card-img-top">
-                  <div class="card-body">
-                      <h5>SLR<p style="float: right; font-size: small;">€700,000</p></h5>
-                  </div>
-              </div>
-            </a>
+      </a>
       </div>
-</div>
+      <div class="col-md-4">
+        <a style="text-decoration: none;" href="murci.html">
+        <div class="card">
+          <img src="https://static.wikia.nocookie.net/topgear/images/0/03/2002_lamborghini_murcielago_2.jpg/revision/latest?cb=20111203192849" class="card-img-top" alt="f40">
+          <div class="card-body">
+          <h5>LAMBO MURCIA <p style="float: right; font-size: small;">€400,000</p></h5>
+        </div>
+      </div>
+    </a>
+    </div>
+    <div class="col-md-4">
+      <a style="text-decoration: none;" href="slr.html">
+        <div class="card">
+          <img src="https://i.ytimg.com/vi/RW2w5BhM6NM/hq720.jpg?sqp=-oaymwEhCK4FEIIDSFryq4qpAxMIARUAAAAAGAElAADIQj0AgKJD&rs=AOn4CLBUqfWfzYl3kZiE7eWwSdnN9aoYKg" class="card-img-top" alt="f40">
+          <div class="card-body">
+          <h5>SLR <p style="float: right; font-size: small;">€700,000</p></h5>
+        </div>
+      </div>
+      </a>
+    </div>
+    </div>
+    </div>
     <!--ROW 2-->
-    <div class="container my-4">
+    <div class="container my-4">   
         <div class="row">
           <div class="col-md-4">
-                <div class="card">
-                    <img src="https://car-images.bauersecure.com/wp-images/5882/porsche918spyder.jpg" class="card-img-top" alt="f40">
-                    <div class="card-body">
-                        <h5>918 SPYDER<p style="float: right; font-size: small;">€781,000</p></h5>
-                    </div>
-                </div>
+            <a id="SPYDER" style="text-decoration: none;" href="#about">
+            <div class="card">
+              <img src="https://car-images.bauersecure.com/wp-images/5882/porsche918spyder.jpg" class="card-img-top" alt="f40">
+              <div class="card-body">
+              <h5>918 SPYDER <p style="float: right; font-size: small;">€781,000</p></h5>
+            </div>
           </div>
+          </a>
+        </div>
         <div class="col-md-4">
+          <a id="M4" style="text-decoration: none;" href="#about">
           <div class="card">
             <img src="https://cdn.shopify.com/s/files/1/0280/7568/8011/files/BMW-F87-M2-Competition-Carbon-Fibre-Front-Lip.jpg?v=1706781497" class="card-img-top" alt="f40">
             <div class="card-body">
             <h5>M4 COMP <p style="float: right; font-size: small;">€108,380</p></h5>
           </div>
         </div>
+      </a>
       </div>
       <div class="col-md-4">
+        <a id="REGERA" style="text-decoration: none;" href="#about">
           <div class="card">
             <img src="https://news.dupontregistry.com/wp-content/uploads/2023/09/download-2024-01-16T095418.314-915x570.jpeg" class="card-img-top" alt="f40">
             <div class="card-body">
-              <h5>K.REGERA <p style="float: right; font-size: small;">€2,100,010</p></h5>
-            </div>
+            <h5>K.REGERA <p style="float: right; font-size: small;">€2,100,010</p></h5>
           </div>
+        </div>
+      </a>
       </div>
       </div>
       </div>
@@ -242,28 +267,34 @@
       <div class="container my-4">
         <div class="row">
           <div class="col-md-4">
+            <a id="TVR" style="text-decoration: none;" href="#about">
             <div class="card">
               <img src="https://www.topgear.com/sites/default/files/images/news-article/2017/09/2fdbff325e590ff9cf0524ba02e58100/dsc_3056.jpg" class="card-img-top" alt="f40">
               <div class="card-body">
-                <h5>TVR GRIFFITH <p style="float: right; font-size: small;">€49,900</p></h5>
-              </div>
+              <h5>TVR GRIFFITH <p style="float: right; font-size: small;">€49,900</p></h5>
             </div>
           </div>
+          </a>
+        </div>
         <div class="col-md-4">
+          <a id="VANQUISH" style="text-decoration: none;" href="#about">
           <div class="card">
             <img src="https://images.carandbike.com/cms/articles/2024/9/3214393/Aston_Martin_Vanquish_fad88854b7.jpg" class="card-img-top" alt="f40">
             <div class="card-body">
-              <h5>VANQUISH <p style="float: right; font-size: small;">€189,888</p></h5>
-            </div>
+            <h5>VANQUISH <p style="float: right; font-size: small;">€189,888</p></h5>
           </div>
+        </div>
+      </a>
       </div>
       <div class="col-md-4">
+        <a id="NISSAN" style="text-decoration: none;" href="#about">
           <div class="card">
             <img src="https://i.ytimg.com/vi/ykmRqzu1HIY/maxresdefault.jpg" class="card-img-top" alt="f40">
             <div class="card-body">
-              <h5>NISSAN GTR <p style="float: right; font-size: small;">€215,000</p></h5>
-            </div>
+            <h5>NISSAN GTR <p style="float: right; font-size: small;">€215,000</p></h5>
           </div>
+        </div>
+      </a>  
       </div>
       </div>
       </div>
@@ -271,38 +302,43 @@
       <div class="container my-4">
         <div class="row">
           <div class="col-md-4">
+            <a id="Cilindri" style="text-decoration: none;" href="#about">
             <div class="card">
               <img src="https://hips.hearstapps.com/hmg-prod/images/new-ferrari-v12-ext-03-white-media-66343a0ed570a.jpg" class="card-img-top" alt="f40">
               <div class="card-body">
-                <h5>12 Cilindri <p style="float: right; font-size: small;">€€395,000</p></h5>
-              </div>
+              <h5>12 Cilindri <p style="float: right; font-size: small;">€€395,000</p></h5>
             </div>
+          </div>
+        </a>
         </div>
         <div class="col-md-4">
+          <a id="M8" style="text-decoration: none;" href="#about">
           <div class="card">
             <img src="https://vehicle-images.dealerinspire.com/8d14-110004847/WBSDZ0C03NCH56863/28211d6c2f827fc9dcb7a8f73876e34d.jpg" class="card-img-top" alt="f40">
             <div class="card-body">
-              <h5>M8 COMP <p style="float: right; font-size: small;">€253,885</p></h5>
-            </div>
+            <h5>M8 COMP <p style="float: right; font-size: small;">€253,885</p></h5>
           </div>
+        </div>
+      </a>
       </div>
       <div class="col-md-4">
+        <a id="FORD" style="text-decoration: none;" href="#about">
           <div class="card">
             <img src="https://auto-storica.com/wp-content/uploads/2021/10/7-1-scaled.jpg" class="card-img-top" alt="f40">
             <div class="card-body">
-              <h5>FORD GT <p style="float: right; font-size: small;">€470,000</p></h5>
-            </div>
+            <h5>FORD GT <p style="float: right; font-size: small;">€470,000</p></h5>
           </div>
+        </div>
+      </a>
       </div>
       </div>
       </div>
       </div>
       </div>
       </div>
-    </div>
-    </div>
-    
-    <!--Footer-->
+
+        <!--Footer-->
+        <div data-role="footer">
       <footer class="bg-dark text-white text-center p-3">
       <div class="container my-4">
         <div class="row">
@@ -341,9 +377,9 @@
         <div class="col-md-2">
           <h6 style="text-align: left;">General</h6>
           <ul class="footer-emails">
-            <li><a href="file:///C:/Users/surya/Downloads/Motorworks/Signup.html">Sign Up</a></li>
-            <li><a href="file:///C:/Users/surya/Downloads/Motorworks/Login.html">Log In</a></li>
-            <li><a href="file:///C:/Users/surya/Downloads/Motorworks/Purchase.html">Checkout</a></li>
+            <li><a href="Signup.html">Sign Up</a></li>
+            <li><a href="Login.html">Log In</a></li>
+            <li><a href="Purchase.html">Checkout</a></li>
           </ul>
       </div>
       <div class="col-md-3">
@@ -359,9 +395,133 @@
         </div>
       </div>
       </footer>
+    </div>
+  </div>
 
+  <div data-role="page" id="about" data-transition="none">
+    <div class="big-cont">
+      <ul class="navbar">
+          <li><a href="2-Door.html">2-Door</a></li>
+          <li><a href="4-Door.html">4-Door</a></li>
+          <li><a href="2-Wheeler.html">2-Wheeler</a></li>
+          <li><a href="Parts.html">Auto Parts</a></li>
+        </ul>
+
+
+      <!--ROW 1-->
+      <div class="container my-4">
+        <div class="row">
+          <div class="col-md-4">
+            <div class="card">
+              <img id="about-image" src="https://cdn.ferrari.com/cms/network/media/img/resize/5de7923a91756c07f10b1720-ferrari-f40-1987-intro-share?width=1080" class="card-img-top" alt="f40">
+              <div class="card-body">
+              <h5 id="title">FERRARI F40 <p id="display-word" style="float:right; font-size:small;">€1,500,000</p></h5>
+            </div>
+            </div>
+
+            <div class="options">
+              <button id="change-item">currency</button>
+              <button id="myButton3" style="background-color: #0066ff; margin-left: 120px;"></button>
+              <button id="myButton" style="background-color: #eeff00;"></button>
+              <button id="myButton2" style="background-color: #ff0000;"></button>
+              <a href="Purchase.html">
+              <button id="purchase">Purchase</button>
+            </a>
+              <button id="shortlist">Shortlist</button>
+            </div>
+
+          </div>
+          <div class="col-md-8" style="font-weight:lighter;">
+              <p id="about-text">Experience the thrill of owning a true icon of automotive history with the **Ferrari F40**—a masterpiece designed to ignite your passion for speed and luxury. As the last Ferrari personally approved by Enzo Ferrari himself, the F40 is more than just a car; it’s a legacy of performance, craftsmanship, and exclusivity. Beneath its striking, aerodynamic body lies a twin-turbocharged V8 engine that delivers an exhilarating 471 horsepower, launching you from 0 to 60 mph in just 3.8 seconds. With its lightweight design, raw power, and unmistakable presence, the F40 isn’t just a drive—it’s an experience that commands attention at every turn. This is your chance to own a timeless piece of Ferrari heritage, built for those who crave the ultimate driving adventure.</p>
+          </div>
+          </div>
+          <div class="row" style="font-weight:lighter;">
+              <h3>Specs</h3>
+              <div class="col-md-4" style="border-left: 2px solid black;">
+                  <p>Engine: 2.9L Twin-Turbocharged V8
+                      <br>Horsepower: 471 hp @ 7,000 rpm
+                      <br>Torque: 426 lb-ft @ 4,000 rpm</p>
+              </div>
+              <div class="col-md-4" style="border-left: 2px solid black;">
+                  <p>
+                      Top Speed: 201 mph (324 km/h)
+                    <br> 0-60 mph: 3.8 seconds
+                    <br>Transmission: 5-speed manual
+                    <br> Drivetrain: Rear-Wheel Drive (RWD)</p>
+              </div>
+              <div class="col-md-4" style="border-left: 2px solid black;">
+                  <p>
+                      Weight: 2,425 lbs (1,100 kg)
+                      <br> Chassis: Carbon fiber, Kevlar, and aluminum construction
+                      <br>Production Years: 1987–1992
+              </div>
+              </div>
+        </div>
+        </div>
+      
+      <!--Footer-->
+        <footer class="bg-dark text-white text-center p-3">
+        <div class="container my-4">
+          <div class="row">
+            <div class="col-md-2">
+                <img src="ferrari_logo.png" style="width:100px;" alt="f40">
+            </div>
+            <div class="col-md-2">
+              <img src="lambo_logo.png" style="width:100px;" alt="f40">
+          </div>
+          <div class="col-md-2">
+            <img src="mas_logo.png" style="width:100px;" alt="f40">
+        </div>
+        <div class="col-md-2">
+          <img src="porsche_logo.png" style="width:100px;" alt="f40">
+      </div><div class="col-md-2">
+        <img src="bmw_logo.png" style="width:100px;" alt="f40">
+    </div><div class="col-md-2">
+      <img src="benz_logo.png" style="width:100px;" alt="f40">
+  </div>
+          </div>
+        </div>
+        <div class="container my-4">
+          <div class="row" style="margin-top: 50px;">
+            <div class="col-md-3">
+                <h5 style="float:left">SIFK Motorworks</h5>
+            </div>
+            <div class="col-md-3">
+              <h6 style="text-align: left;">Contact Us</h6>
+              <ul class="footer-emails">
+                <li><a href="">surya.sathyarajan2@mail.dcu.ie</a></li>
+                <li><a href="">Fionn</a></li>
+                <li><a href="">Iarla</a></li>
+                <li><a href="">Karol</a></li>
+              </ul>
+          </div>
+          <div class="col-md-2">
+            <h6 style="text-align: left;">General</h6>
+            <ul class="footer-emails">
+              <li><a href="Signup.html">Sign Up</a></li>
+              <li><a href="Login.html">Log In</a></li>
+              <li><a href="Purchase.html">Checkout</a></li>
+            </ul>
+        </div>
+        <div class="col-md-3">
+          <h6 style="text-align: left;">Socials</h6>
+          <ul class="footer-emails">
+          <li><img src="insta_icon.png" style="width:25px;" alt="f40">
+            <img src="x_icon.png" style="width:25px;" alt="f40">
+            <img src="fb_icon.png" style="width:25px;" alt="f40">
+            <img src="yt_icon.png" style="width:25px;" alt="f40"></li>
+
+          </ul>
+      </div>
+          </div>
+        </div>
+        </footer>
+      </div>
 
           <!--Slideshow Javascript & Signup Modal Javascript-->
+
+          <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+
   <script>
     
       let slideIndex = 1;
@@ -417,10 +577,58 @@ document.querySelector('.signupbtn').addEventListener('click', function(event) {
 
 });
 
+$(document).on("mobileinit", function() {
+  $.mobile.autoInitializePage = false; // Disable auto-enhancement of pages
+});
+
+  $('a').off('click');
+
+  $("#SPYDER").click(function(){
+  $("#about-image").attr("src","https://car-images.bauersecure.com/wp-images/5882/porsche918spyder.jpg")
+  $("#title").text("SPYDER")
+  $("#about-text").text("The name Spyder refers to a sporty car in this class of vehicle where it stands out due to its lightweight body and the usually open top. It is fitting that engaging such a car would involve a driver being more in touch with the environment around them. Among the automotive manufacturers to have employed the use of the designation Spyder for their high end models include Ferrari, Lamborghini, Porsche and Audi. Most of these vehicles are beautifully designed with amazing engineering designs that are built for fast movement, efficiency, and luxury. Both the soft and hardtop convertible gives the driver a sense of freedom and a fun feel especially when they go on a spirited drive on an awe inspiring road. Examples of these are the Ferrari 488 Spider Lamborghini Huracan Spyder and Audi R8 Spyder which are all stunning in both performance and beauty. Spyder models are among the most popular among drivers who want to experience an open door feeling while having immense power without losing stability and control.")
+});
+  $("#M4").click(function(){
+  $("#about-image").attr("src","https://cdn.shopify.com/s/files/1/0280/7568/8011/files/BMW-F87-M2-Competition-Carbon-Fibre-Front-Lip.jpg?v=1706781497")
+  $("#title").text("BMW M4")
+  $("#about-text").text("The BMW M4 Competition is a high-performance variant of the BMW 4 Series, designed to deliver an exhilarating driving experience on both road and track. Featuring a sleek and aggressive design, it boasts signature elements like the large kidney grille, aerodynamic enhancements, and muscular proportions. Under the hood, the M4 Competition is powered by a 3.0-liter twin-turbocharged inline-six engine that produces an impressive 503 horsepower and 479 lb-ft of torque, enabling a 0-60 mph sprint in just 3.8 seconds. Its advanced engineering includes a choice between rear-wheel drive for purists or an optional xDrive all-wheel-drive system for enhanced grip and versatility. Paired with a quick-shifting 8-speed automatic transmission, the M4 Competition ensures seamless power delivery. Inside, the car offers a luxurious cabin with M-specific details,")
+});
+  $("#REGERA").click(function(){
+  $("#about-image").attr("src","https://news.dupontregistry.com/wp-content/uploads/2023/09/download-2024-01-16T095418.314-915x570.jpeg")
+  $("#title").text("Koenigsegg Regera")
+  $("#about-text").text("With its cutting-edge technology and flawless design, the Koenigsegg Regera is a breakthrough hypercar that redefines performance and elegance. The Regera was first introduced in 2015 and is propelled by a cutting-edge hybrid drivetrain that combines three electric motors and a 5.0-liter twin-turbo V8 engine to produce an incredible 1,500 horsepower. This special arrangement is combined with Koenigsegg's Direct Drive technology, which transfers power more effectively and lighter than a conventional gearbox. With a time of less than 20 seconds from 0 to 249 mph, the outcome is amazing acceleration. The lightweight carbon fibre used to create the Regera's streamlined, aerodynamic body demonstrates Koenigsegg's dedication to both performance and design. The vehicle's opulent interior has leather upholstery, state-of-the-art technology, and high-quality materials, guaranteeing a sophisticated experience for drivers")
+});
+  $("#TVR").click(function(){
+  $("#about-image").attr("src","https://www.topgear.com/sites/default/files/images/news-article/2017/09/2fdbff325e590ff9cf0524ba02e58100/dsc_3056.jpg")
+  $("#about-text").text("The TVR Griffith is a sporty and eye-catching vehicle that perfectly captures the creativity and workmanship of British automakers. The Griffith, which was first released in the 1960s and brought back to life in 1991, was well-known for its unique style, strong performance, and lightweight build. The most recent version, which was introduced in 2017, represents TVR's comeback to the market with a contemporary interpretation of this timeless design. With a naturally aspirated 5.0-liter V8 engine from Ford that Cosworth developed to produce 500 horsepower, the Griffith blends agility and sheer power. It provides outstanding handling and an exhilarating driving experience because to its carbon-fiber chassis and nearly flawless 50:50 weight distribution. Aggressive lines, flared fenders, and a dominating presence are all characteristics of the sleek, aerodynamic design, and the simple interior concentrates on the necessities")
+});
+  $("#VANQUISH").click(function(){
+  $("#about-image").attr("src","https://images.carandbike.com/cms/articles/2024/9/3214393/Aston_Martin_Vanquish_fad88854b7.jpg")
+  $("#title").text("Aston Martin Vanquish")
+  $("#about-text").text("The Aston Martin Vanquish is an opulent grand tourer that flawlessly combines thrilling performance with classic grace. The Vanquish, which debuted in 2001 and was improved upon by succeeding generations, swiftly rose to prominence as an Aston Martin flagship vehicle, demonstrating the company's dedication to quality and creativity. The Vanquish's naturally aspirated 5.9-liter V12 engine produces a remarkable amount of power; later variants can reach 595 horsepower, which allows for a top speed of more than 200 mph. Its lightweight carbon-fiber body preserves the car's distinctive muscular posture and flowing lines while guaranteeing agility and responsiveness. The Vanquish's luxurious interior, which includes hand-stitched leather, cutting-edge technology, and painstaking attention to detail, guarantees a driving experience that is both thrilling and comfortable. As a representation of British auto")
+});
+  $("#NISSAN").click(function(){
+  $("#about-image").attr("src","https://i.ytimg.com/vi/ykmRqzu1HIY/maxresdefault.jpg")
+  $("#title").text("Nissan GTR")
+  $("#about-text").text("Known by many as Godzilla, the Nissan GT-R is a famous sports vehicle that, since its 2007 launch, has redefined engineering perfection and performance. The GT-R's hand-assembled 3.8-liter twin-turbocharged V6 engine produces incredible power; the NISMO version of the current vehicle can generate up to 600 horsepower. Its cutting-edge dual-clutch gearbox and sophisticated all-wheel-drive system offer remarkable traction and blazingly quick gear changes, allowing it to accelerate from 0 to 60 miles per hour in less than three seconds. Sharp lines, a large rear wing, and distinctive quad exhausts highlight the GT-R's aggressive yet aerodynamic appearance, which highlights its race-inspired origins. With driver-focused features like a multifunctional display that provides real-time performance statistics, the interior of the cabin combines comfort and technology. Well-known for outperforming its peers in terms of performance and value,")
+});
+  $("#Cilindri").click(function(){
+  $("#about-image").attr("src","https://hips.hearstapps.com/hmg-prod/images/new-ferrari-v12-ext-03-white-media-66343a0ed570a.jpg")
+  $("#title").text("Cilindri")
+  $("#about-text").text("The number of cylinders in an engine, which is a crucial component in determining a car's performance and personality, is frequently referred to as Cilindri, which means cylinders in Italian. Automobiles that are praised for having strong engines, like Maserati, Lamborghini, and Ferrari models, frequently highlight the number and arrangement of cylinders in their designs, highlighting the significance of cilindri in automobile engineering. In classic versions like the Ferrari 812 Superfast, for instance, a V12 engine—priced for its smoothness and high-revving nature—represents the ultimate in elegance and performance. In a similar vein, V8s and V10s dominate supercars and high-performance sedans by striking a balance between power and efficiency. The configuration of the cylinders, whether inline, V-shaped, or flat, influences the engine's efficiency, power delivery, and sound in addition to its sheer quantity.")
+});
+  $("#M8").click(function(){
+  $("#about-image").attr("src","https://vehicle-images.dealerinspire.com/8d14-110004847/WBSDZ0C03NCH56863/28211d6c2f827fc9dcb7a8f73876e34d.jpg");
+  $("#title").text("BMW M8")
+  $("#about-text").text("A high-performance luxury sports vehicle, the BMW M8 Competition skilfully blends sophisticated design, state-of-the-art technology, and thrilling power. The M8 Competition's 4.4-liter twin-turbocharged V8 engine produces an incredible 617 horsepower and 553 lb-ft of torque, and it is available as a coupe, convertible, or Gran Coupé. One of BMW's fastest production vehicles, it can accelerate from 0 to 60 miles per hour in as little as 3.0 seconds because to its enormous power. Outstanding grip and dynamic handling are guaranteed by the M xDrive all-wheel-drive system, which can be switched to rear-wheel-drive mode. It has a commanding presence because to its aggressive yet elegant design, which includes powerful air intakes, sharp lines, and distinctive M-specific embellishments. The interior of the cabin is a luxurious retreat with high-end materials, cutting-edge technology, and adjustable driving modes.")
+});
+  $("#FORD").click(function(){
+  $("#about-image").attr("src","https://auto-storica.com/wp-content/uploads/2021/10/7-1-scaled.jpg");
+  $("#title").text("Ford GT")
+  $("#about-text").text("Ford's great motorsport history, especially its historic triumph at the 24 Hours of Le Mans in the 1960s, is honoured with the high-performance supercar known as the GT. The Ford GT, which debuted in 2004 and was brought back to life in 2016, combines innovative technology with eye-catching styling. With a 3.5-liter twin-turbocharged V6 engine that generates 660 horsepower and 550 lb-ft of torque, the most recent version can achieve top speeds of more than 200 mph. Its outstanding handling and stability at high speeds are a result of its active suspension system, lightweight carbon fibre body, and sophisticated aerodynamics. The GT is readily recognisable because to its signature design, which incorporates bold, sharp lines, a rear engine compartment, and characteristic dihedral doors. Inside, the cabin blends luxury and simple racing-inspired features, with a driver-focused")
+});
+
     </script>
-
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
-
 
 </body>
 </html>
