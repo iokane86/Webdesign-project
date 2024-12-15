@@ -145,11 +145,12 @@
       <img class="mySlides-img" src="g-wagon_slide.jpg" style="width:80%; display: block;margin-left: auto; margin-right:auto;">
       <div class="text">G Wagon</div>
     </div>
-    
+
+    <!--Arrow buttons-->
     <a class="prev" onclick="plusSlides(-1)">❮</a>
     <a class="next" onclick="plusSlides(1)">❯</a>
     
-    
+    <!--3 dots-->
     <div class="dot-set" style="text-align:center;">
       <span class="dot" onclick="currentSlide(1)"></span> 
       <span class="dot" onclick="currentSlide(2)"></span> 
@@ -355,9 +356,10 @@
       </footer>
 
 
-          <!--Slideshow Javascript & Signup Modal Javascript-->
   <script>
-    
+
+//Slideshow Javascript
+      
       let slideIndex = 1;
 showSlides(slideIndex);
 
@@ -383,6 +385,8 @@ function showSlides(n) {
 
   /*-----------------------------------------------------*/
 
+// SignUp Modal Javascript 
+      
    // Get the modal
 var modal = document.getElementById('id01');
 
@@ -393,6 +397,7 @@ window.onclick = function(event) {
   }
 };
 
+// SignUp button is set to user's username
 document.querySelector('.signupbtn').addEventListener('click', function(event) {
   event.preventDefault();
   const usernameInput = document.getElementById('user-input').value;
